@@ -21,7 +21,7 @@ There will be a few programs you will have to aqcuired before being able to use 
 
 ### Installing
 
-
+![alt text](https://i.imgur.com/4D9BFBQ.png)
 
 ```
 Give the example
