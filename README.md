@@ -40,7 +40,7 @@ There will be a few programs you will have to download before being able to use 
 
 3. If you get a warning saying " WARNING: You are using pip version 19.2.3, however version 20.1.1 is available. You should consider upgrading via the 'python -m pip install --upgrade pip' command." Ignore it as the version provided is fine
 
-### Cemu:
+### Cemu
 
 1. To install Cemu, head to their main website located [here](https://cemu.info/), and download the latest version.
 
@@ -68,7 +68,7 @@ Note: Your opponent does not matter
 
 Note: Take note of what version of Tekken Tag 2 you have as there will be 2: US & EU. The US version requires an extra step I will detail later.
 
-### Tekken Moveset Extractor Install:
+### Tekken Moveset Extractor Install
 
 1. Go to the link provided in prerequisites and download **TekkenMovesetExtractor.zip** from the latest release.
 
@@ -76,7 +76,7 @@ Note: Take note of what version of Tekken Tag 2 you have as there will be 2: US 
 
 3. Do not run this as we have to configure our most important program first.
 
-### Cheat Engine: 
+### Cheat Engine
 
 This part will be the most complex part of this guide so read carefully
 
