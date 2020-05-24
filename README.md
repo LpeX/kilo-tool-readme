@@ -1,6 +1,6 @@
 # Tekken Moveset Extractor By [kiloutre](https://twitter.com/kiloutre) 
 
-This tool's main purpose is to port over movelists and mechanics from Tekken Tag 2 into Tekken 7.
+This tool's main purpose is to port over move lists and mechanics from Tekken Tag 2 into Tekken 7.
 
 It also allows you to change the move set of characters already in Tekken 7 to other characters in the 7 roster.
 
@@ -42,7 +42,7 @@ There will be a few programs you will have to download before being able to use 
 
 ### Cemu:
 
-1. To install Cemu, head to their main website located [here](https://cemu.info/) and download the latest version.
+1. To install Cemu, head to their main website located [here](https://cemu.info/), and download the latest version.
 
 2. The only settings you will need to change in Cemu are the input controls as you will have to navigate the menus.
 
@@ -86,9 +86,9 @@ This part will be the most complex part of this guide so read carefully
 
 Note: We are going to use Cheat Engine to find our Cemu_Base code
 
-4. In Cheat Engine there will be an icon that is glowing different colours, you will want to click that button and select Cemu from the list provided.
+4. In Cheat Engine there will be an icon that is glowing different colors, you will want to click that button and select Cemu from the list provided.
 
-5. Now that the Cemu process has been selected, right click on the box where it says Value Type and select the top option which should say **"Define new custom type (Auto Assembler)"**
+5. Now that the Cemu process has been selected, right-click on the box where it says Value Type and select the top option which should say **"Define new custom type (Auto Assembler)"**
 
 6. A box will appear with some code in it, delete all the code in this box and replace it with the code provided in this [Paste Bin](https://pastebin.com/U3xSNvVE) and hit OK.
 
@@ -100,7 +100,7 @@ Note: Now the Value Type box should state **"4 Byte Big Endian"**
 
 Note: The value **"32770"** is used to identify when the character is crouching and the value **"32769"** is used to identify when the character is standing.
 
-9. Now that you've double clicked the address, it should appear in the bottom box below. right click it and select **"Find out what accesses this address"** 
+9. Now that you've double-clicked the address, it should appear in the bottom box below. right-click it and select **"Find out what accesses this address"** 
 
 10. Hit yes to the confirmation. You will see a list of instructions, you will need to select the instruction that holds both **“R13+R12”**. See below:
 
@@ -118,7 +118,7 @@ cemu_base = 0x12F4EF70000 (This is a example value yours will differ)
 ```
 **IF YOU HAVE THE EU VERSION OF TEKKEN TAG 2 YOU DO NOT NEED TO FOLLOW THE NEXT STEP**
 
-14. In the text file you will find **“cemu_p1_addr = “** you will want to place the value **“0x10884C70”** if you are using the american version of Tekken Tag 2
+14. In the text file you will find **“cemu_p1_addr = “** you will want to place the value **“0x10884C70”** if you are using the American version of Tekken Tag 2
 
 ```
 # CEMU player addresses, constant
@@ -126,11 +126,11 @@ cemu_p1_addr  = 0x10884C70
 ```
 15. Now save the text file and open **“TekkenMovesetExtractor.exe”**
 
-Note: Be aware that everytime you need to import new characters you haven’t imported before, you will have to follow these steps again (besides No. 14)
+Note: Be aware that every time you need to import new characters you haven’t imported before, you will have to follow these steps again (besides No. 14)
 
 ## Using Tekken Moveset Extractor
 
-16. After running the program (you should still have Cemu open in practice mode with the character you want to import in player 1 slot) Hit the button **“Export: Tekken Tag2: Player 1”** (Give some time for this to export, program may freeze during this process, do not worry as this is normal)
+16. After running the program (you should still have Cemu open in practice mode with the character you want to import in player 1 slot) Hit the button **“Export: Tekken Tag2: Player 1”** (Give some time for this to export, the program may freeze during this process, do not worry as this is normal)
 
 17. The program will now convert the chosen character’s move list into one that can be imported into Tekken 7 (You can see your exported characters in the list on the right side of the application. (2_ means Tag 2 and 7_ mean Tekken 7)
 
@@ -156,4 +156,3 @@ A few notes to end with:
 
 
 This guide was created by [LpeX](https://twitter.com/mrlpex)
-
