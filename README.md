@@ -155,5 +155,5 @@ This can be used online as long as the other person is running the tool also and
 A lot of rage arts and intro/outros are broken when using this tool
 
 
-
+This guide was created by [LpeX] (https://twitter.com/mrlpex)
 
