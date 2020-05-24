@@ -13,19 +13,64 @@ This is quite an involved process in this early stage but we are working towards
 
 There will be a few programs you will have to aqcuired before being able to use the tool with Tekken 7.
 
-* [Cemu](https://cemu.info/) - A emulator used to run the Wii U port of Tekkken Tag 2
+* [TekkenMovesetExtractor](https://github.com/Kiloutre/TekkenMovesetExtractor/releases/) - The tool that does all the magic.
+* [Cemu](https://cemu.info/) - A emulator used to run the Wii U port of Tekkken Tag 2.
 * [Python 3.6.5](https://www.python.org/downloads/release/python-365/) - Packages from Python are needed for this tool to run.
-* [PYWIN32 using PIP](http://www.qarevolution.com/5-step-install-pywin32-using-pip/) - Much needed Python extensions
-* [Cheat Engine](https://www.cheatengine.org/) - Used to look into the opcodes in Cemu
-
+* [PYWIN32 using PIP](http://www.qarevolution.com/5-step-install-pywin32-using-pip/) - Much needed Python extensions.
+* [Cheat Engine](https://www.cheatengine.org/) - Used to look into the opcodes in Cemu.
+* [Wii U Games Files For Tekken Tag 2] - You will have to aquire this yourself
 
 ### Installing
 
+### Python 3.6.5
+
+1. Download version 3.6.5 of Python from the link provided. Making sure to pick the "Windows x86-64 executable installer" under files, if you're running windows that is.
+
+2. Make sure during installation you've checked the "Add Python 3.6 to PATH" option
+
+3. Go Through the normal steps of the installion and take note of where you've installed it as that will come in handy in the future.
+
+4. Once setup has completed hit close.
+
+### PYWIN32 using PIP
+
+1. Make sure this is done after installing Python 3.6.5
+
+2. Follow the instructions on the link provided in Prerequisites
+
+3. If you get a warning saying " WARNING: You are using pip version 19.2.3, however version 20.1.1 is available. You should consider upgrading via the 'python -m pip install --upgrade pip' command." Ignore it as the version provided is fine
+
+### Cemu:
+
+1. To install Cemu head to their main website located [here](https://cemu.info/)and download the latest verison.
+
+2. The only setting you will need to change in Cemu are the input ones as you will have to navigate the menus.
+
+3. Wii U game files will come pacakged as such:
+
 ![alt text](https://i.imgur.com/4D9BFBQ.png)
 
-```
-Give the example
-```
+4. Click File -> Load and navigate to the code folder shown in the image above.
+
+5. This folder contains the file we will use to run Tag 2: Tekken.rpx
+
+6. Tag 2 should now launch and if you've set your input settings up correctly you should be able to navigate the menus.
+
+7. Leave Cemu running in the back ground while you setup Cheat Engine.
+
+Note: Take note of what version of Tekken Tag 2 you have as there will be 2: US & EU. The US version requires an extra step I will detail later.
+
+### TekkenMovesetExtractor:
+
+1. 
+
+### Cheat Engine: 
+
+1. Make sure you downloaded the latest version of Cheat Engine from the link provided
+
+2. The install is quite straight forward. At the end launch Cheat Engine (you can try out the tutorial if you want)
+
+3. 
 
 And repeat
 
