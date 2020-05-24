@@ -150,9 +150,9 @@ And you’re done!
 
 A few notes to end with:
 
-You can export Tekken 7 characters using the **”Export: Tekken7: Player 1”** option. This will add them to the list to be imported.
-This can be used online as long as the other person is running the tool also and has setup P2 as the character you have imported for yourself (if you don’t follow those rules, you will be desyncing a lot)
-A lot of rage arts and intro/outros are broken when using this tool
+* You can export Tekken 7 characters using the **”Export: Tekken7: Player 1”** option. This will add them to the list to be imported.
+* This can be used online as long as the other person is running the tool also and has setup P2 as the character you have imported for yourself (if you don’t follow those rules, you will be desyncing a lot)
+* A lot of rage arts and intro/outros are broken when using this tool
 
 
 This guide was created by [LpeX](https://twitter.com/mrlpex)
