@@ -1,24 +1,24 @@
 # Tekken Moveset Extractor By [kiloutre](https://twitter.com/kiloutre) 
 
-This tools main purpose is to port over movelists and mechanics from Tekken Tag 2 into Tekken 7.
+This tool's main purpose is to port over movelists and mechanics from Tekken Tag 2 into Tekken 7.
 
 It also allows you to change the move set of characters already in Tekken 7 to other characters in the 7 roster.
 
 ## Getting Started
 
-This is quite an involved process in this early stage but we are working towards making it more accessable for players in the future.
+This is quite an involved process in this early stage but we are working towards making it more accessible for players in the future.
 
 
 ### Prerequisites
 
-There will be a few programs you will have to aqcuired before being able to use the tool with Tekken 7.
+There will be a few programs you will have to download before being able to use this tool with Tekken 7.
 
 * [TekkenMovesetExtractor](https://github.com/Kiloutre/TekkenMovesetExtractor/releases/) - The tool that does all the magic.
-* [Cemu](https://cemu.info/) - A emulator used to run the Wii U port of Tekkken Tag 2.
+* [Cemu](https://cemu.info/) - A emulator used to run the Wii U port of Tekken Tag 2.
 * [Python 3.6.5](https://www.python.org/downloads/release/python-365/) - Packages from Python are needed for this tool to run.
 * [PYWIN32 using PIP](http://www.qarevolution.com/5-step-install-pywin32-using-pip/) - Much needed Python extensions.
 * [Cheat Engine](https://www.cheatengine.org/) - Used to look into the opcodes in Cemu.
-* Wii U Games Files For Tekken Tag 2 - You will have to aquire this yourself
+* Wii U Games Files For Tekken Tag 2 - You will have to acquire this yourself
 
 ### Installing & Walkthrough
 
@@ -28,9 +28,9 @@ There will be a few programs you will have to aqcuired before being able to use 
 
 2. Make sure during installation you've checked the "Add Python 3.6 to PATH" option
 
-3. Go Through the normal steps of the installion and take note of where you've installed it as that will come in handy in the future.
+3. Go Through the normal steps of the installation and take note of where you've installed it as that will come in handy in the future.
 
-4. Once setup has completed hit close.
+4. Once the setup has completed, hit close.
 
 ### PYWIN32 using PIP
 
@@ -42,11 +42,11 @@ There will be a few programs you will have to aqcuired before being able to use 
 
 ### Cemu:
 
-1. To install Cemu head to their main website located [here](https://cemu.info/) and download the latest verison.
+1. To install Cemu head to their main website located [here](https://cemu.info/) and download the latest version.
 
 2. The only setting you will need to change in Cemu are the input ones as you will have to navigate the menus.
 
-3. Wii U game files will come pacakged as such:
+3. Wii U game files will come packaged as such:
 
 ![alt text](https://i.imgur.com/4D9BFBQ.png)
 
@@ -62,13 +62,13 @@ Note: Picking solo or tag here does not matter as you can select in the Extracto
 
 8. For this im picking solo and now you can pick the character you wish to transfer over to Tekken 7
 
-Note: Your opponet does not matter
+Note: Your opponent does not matter
 
 9. Now pick any stage and sit idle in it as we continue installing the rest of the needed programs.
 
 Note: Take note of what version of Tekken Tag 2 you have as there will be 2: US & EU. The US version requires an extra step I will detail later.
 
-### TekkenMovesetExtractor:
+### TekkenMovesetExtractor Install:
 
 1. Go to the link provided in prerequisites and download **TekkenMovesetExtractor.zip** from the latest release.
 
@@ -82,11 +82,11 @@ This part will be the most complex part of this guide so read carefully
 
 1. Make sure you downloaded the latest version of Cheat Engine from the link provided
 
-2. The install is quite straight forward, at the end launch Cheat Engine (you can try out the tutorial if you want)
+2. The install is quite straightforward, at the end launch Cheat Engine (you can try out the tutorial if you want)
 
 3. We are going to use Cheat Engine to find our Cemu_Base code
 
-4. In Cheat Engine there will be a icon that is glowing different colours, you will want to clik that button and select Cemu from the list provided.
+4. In Cheat Engine there will be an icon that is glowing different colours, you will want to clik that button and select Cemu from the list provided.
 
 5. Now that the Cemu process has been selected right click on the box right of where it says Value Type and select the top option which should say "Define new custom type (Auto Assembler)"
 
@@ -98,11 +98,51 @@ Note: Now the Value Type box should state "4 Byte Big Endian"
 
 8. Once the scan has completed, you can let your chosen character rise. Now in the left address list you will notice that one of the addresses has the value of "32769" this is the address we need to double click.
 
-9. Now that you've doubled clicked the address
+9. Now that you've double clicked the address, it should appear in the bottom box below. right click it and select "Find out what accesses this address" 
 
+10. Hit yes to the confirmation. You will see a list of instructions, you will need to select the instruction thas holds both “R13+R12”. See below:
 
+![alt text](https://i.imgur.com/vIgfQZ0.png)
 
+11. Once selected look down to the lower box and find “R13=” this is that cemu_base we require before converting with TME.
 
+12. Speaking of TME, you will now want to navigate to where you placed TME and open the game_addresses.txt file.
+
+13. Grab the value after “R13=” and format it like this example number: “0x12F4EF70000” (Remove 0’s from the front and retain the back) paste that formatted value into the text file we just opened right after the cemu_base.
+
+```
+# CEMU base address, changes at every CEMU restart
+cemu_base = 012F4EF70000
+```
+**IF YOU HAVE THE EU VERSION OF TEKKEN TAG 2 YOU DO NOT NEED TO FOLLOW THE NEXT STEP**
+
+14. In the text file you will find “cemu_p1_addr = “ you will want to place the value “0x10884C70” if you are using the american version of Tekken Tag 2
+
+```
+# CEMU player addresses, constant
+cemu_p1_addr  = 0x10884C70
+```
+15. Now save the text file and open “TekkenMovesetExtractor.exe”
+
+Note: Be aware that everytime you need to import new characters you haven’t imported before, you will have to follow these steps (besides No. 14)
+
+##Using Tekken Moveset Extractor
+
+16. After running the program (you should still have Cemu open in practice mode with the character you want to important in player 1 slot) Hit the button **“Export: Tekken Tag2: Player 1”** (Give some time for this to export, program may freeze during this process, do not worry as this is normal)
+
+17. The program will now convert the chosen characters move list into one that can be imported into Tekken 7 (You can see your exported characters in the list on the right side of the application.
+
+![alt text](https://i.imgur.com/8Z67Rc9.png)
+
+18. If you ar happy with the list of characters you have imported, you can close Cemu down now but do not close down TekkenMovesetExtractor.exe. (Do take note that if you are wanting to import more characters after closing Cemu, you will have to follow the cheat engine section again)
+
+### Importing into Tekken 7
+
+1. Launch Tekken 7 and jump into practice with whatever Tekken 7 character you want
+
+2. Once in practice mode head over to the Extractor, select from the list which character you wish to import into Tekken 7 and hit **”Monitor P1”**
+
+3. Now the full movelist of the character you picked will change to the character you exported and selected on the extractor.
 
 
 
@@ -150,3 +190,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
+
+
