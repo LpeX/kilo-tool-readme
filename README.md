@@ -18,9 +18,9 @@ There will be a few programs you will have to aqcuired before being able to use 
 * [Python 3.6.5](https://www.python.org/downloads/release/python-365/) - Packages from Python are needed for this tool to run.
 * [PYWIN32 using PIP](http://www.qarevolution.com/5-step-install-pywin32-using-pip/) - Much needed Python extensions.
 * [Cheat Engine](https://www.cheatengine.org/) - Used to look into the opcodes in Cemu.
-* [Wii U Games Files For Tekken Tag 2] - You will have to aquire this yourself
+* Wii U Games Files For Tekken Tag 2 - You will have to aquire this yourself
 
-### Installing
+### Installing & Walkthrough
 
 ### Python 3.6.5
 
@@ -42,7 +42,7 @@ There will be a few programs you will have to aqcuired before being able to use 
 
 ### Cemu:
 
-1. To install Cemu head to their main website located [here](https://cemu.info/)and download the latest verison.
+1. To install Cemu head to their main website located [here](https://cemu.info/) and download the latest verison.
 
 2. The only setting you will need to change in Cemu are the input ones as you will have to navigate the menus.
 
@@ -52,33 +52,60 @@ There will be a few programs you will have to aqcuired before being able to use 
 
 4. Click File -> Load and navigate to the code folder shown in the image above.
 
-5. This folder contains the file we will use to run Tag 2: Tekken.rpx
+5. This folder contains the file we will use to run Tag 2: **Tekken.rpx**
 
 6. Tag 2 should now launch and if you've set your input settings up correctly you should be able to navigate the menus.
 
-7. Leave Cemu running in the back ground while you setup Cheat Engine.
+7. Select offline mode and then practice.
+
+Note: Picking solo or tag here does not matter as you can select in the Extractor which player you want to export.
+
+8. For this im picking solo and now you can pick the character you wish to transfer over to Tekken 7
+
+Note: Your opponet does not matter
+
+9. Now pick any stage and sit idle in it as we continue installing the rest of the needed programs.
 
 Note: Take note of what version of Tekken Tag 2 you have as there will be 2: US & EU. The US version requires an extra step I will detail later.
 
 ### TekkenMovesetExtractor:
 
-1. 
+1. Go to the link provided in prerequisites and download **TekkenMovesetExtractor.zip** from the latest release.
+
+2. You can place this anywhere. It does not need to be in the same directory as Tekken.
+
+3. Do not run this as we have to configure our most important program first.
 
 ### Cheat Engine: 
 
+This part will be the most complex part of this guide so read carefully
+
 1. Make sure you downloaded the latest version of Cheat Engine from the link provided
 
-2. The install is quite straight forward. At the end launch Cheat Engine (you can try out the tutorial if you want)
+2. The install is quite straight forward, at the end launch Cheat Engine (you can try out the tutorial if you want)
 
-3. 
+3. We are going to use Cheat Engine to find our Cemu_Base code
 
-And repeat
+4. In Cheat Engine there will be a icon that is glowing different colours, you will want to clik that button and select Cemu from the list provided.
 
-```
-until finished
-```
+5. Now that the Cemu process has been selected right click on the box right of where it says Value Type and select the top option which should say "Define new custom type (Auto Assembler)"
 
-End with an example of getting some data out of the system or using it for a little demo
+6. A box will appear with some code in it, delete all the code in this box and replace it with the code provided in this [Paste Bin](https://pastebin.com/U3xSNvVE) and hit OK.
+
+Note: Now the Value Type box should state "4 Byte Big Endian" 
+
+7. In the blank Value box put in the value "32770" and while doing your first scan (hit New Scan) make sure in Cemu you are crouching in the game during the whole scan process.
+
+8. Once the scan has completed, you can let your chosen character rise. Now in the left address list you will notice that one of the addresses has the value of "32769" this is the address we need to double click.
+
+9. Now that you've doubled clicked the address
+
+
+
+
+
+
+
 
 ## Running the tests
 
@@ -123,4 +150,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 * Hat tip to anyone whose code was used
 * Inspiration
 * etc
-
