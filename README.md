@@ -1,23 +1,27 @@
 # Tekken Moveset Extractor By [kiloutre](https://twitter.com/kiloutre) 
-One Paragraph of project description goes here
+
+This tools main purpose is to port over movelists and mechanics from Tekken Tag 2 into Tekken 7.
+
+It also allows you to change the move set of characters already in Tekken 7 to other characters in the 7 roster.
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+This is quite an involved process in this early stage but we are working towards making it more accessable for players in the future.
+
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+There will be a few programs you will have to aqcuired before being able to use the tool with Tekken 7.
 
-```
-Give examples
-```
+* [Cemu](https://cemu.info/) - A emulator used to run the Wii U port of Tekkken Tag 2
+* [Python 3.6.5](https://www.python.org/downloads/release/python-365/) - Packages from Python are needed for this tool to run.
+* [PYWIN32 using PIP](http://www.qarevolution.com/5-step-install-pywin32-using-pip/) - Much needed Python extensions
+* [Cheat Engine](https://www.cheatengine.org/) - Used to look into the opcodes in Cemu
+
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
 
-Say what the step will be
 
 ```
 Give the example
@@ -50,16 +54,6 @@ Explain what these tests test and why
 ```
 Give an example
 ```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
